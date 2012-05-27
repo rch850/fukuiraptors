@@ -7,30 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    <script src="dino100.js"></script>
+    <script src="quiz.js"></script>
     <meta name="description" content="FukuiRaptors : 恐竜博物館を○○倍楽しむ！！" />
   </head>
 
-  <body>
+<body>
 
-    <div data-role="page">
-
-      <div data-role="header">
-        <h1>もんだい！！</h1>
-      </div><!-- /header -->
-
-      <div data-role="content"> 
-        <p><ruby><rb>福井県<rt>ふくいけん</ruby>はどこにあるでしょう？</p>
-        <p><img src="map48-3.jpg" width="100%"></p>
-        <p>
-          <a href="ans-right.html" data-role="button" data-rel="dialog" data-transition="pop">①</a>
-          <a href="ans-wrong.html" data-role="button" data-rel="dialog" data-transition="pop">②</a>
-          <a href="ans-wrong.html" data-role="button" data-rel="dialog" data-transition="pop">③</a>
-        </p>
-      </div><!-- /content -->
-
-    </div><!-- /page -->
-
-  </body>
+<div id="wapper" data-role="page">
+  <header data-role="header">
+    <h1>クイズ</h1>
+  </header>
+  <div data-role="content" class="content_area_quiz">
+    <p>Q. 福井県の場所をタップしてね。</p>
+    <div class="quiz_map">
+        <div class="img_map"><a href="ans-wrong.html" data-rel="dialog" data-transition="pop"><img src="img/quiz_map.png" alt="日本地図" width="100%" border="0"></a></p>
+        <div class="pref_fukui"><a href="ans-right.html" data-rel="dialog" data-transition="pop"><img src="img/clear.png" alt="福井県" width="100%" border="0"></a></p>
+    </div>
+  </div>
+  <footer data-role="footer" data-position="fixed" data-theme="f">
+<div class="score">
+      <p>あなたは<br>
+        <strong><span>100</span>倍</strong><br>
+        たのしめます！
+      </p>
+</div>
+    <ul>
+      <li><a href="index.html"><img src="img/footer_menu_home.png" width="64" height="73" alt="ホーム"></a></li>
+      <li><a href="result.html"><img src="img/footer_menu_score.png" width="64" height="73" alt="成績表"></a></li>
+  </footer>
+</div>
+</body>
 </html>

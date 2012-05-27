@@ -57,3 +57,27 @@ footer ul li{
 	float:left;
 	margin:0 15px 0 0 ;
 }
+
+/* Quiz */
+
+.content_area_quiz{
+	background-color:white;
+	margin:15px;
+	padding:15px;
+	moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+.content_area_quiz{
+	font-size:16px;
+	color:#005;
+}
+
+.quiz_map{
+	position:relative;
+}
+.pref_fukui{
+	position:absolute;
+	top:58%;
+	left:35%;
+}
