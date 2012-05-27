@@ -7,12 +7,14 @@
 $(function() {
   /**
    * @return 逆ジオコーディングの結果が福井県かどうか
+   * FIXME types をチェックしてないので、県名以外が「福井県」のときにも true
+   * を返してしまいます。
    */
   function isGeocodeResultFukuiPrefecture(results) {
     var result = false;
     $.each(results, function() {
       $.each(this.address_components, function() {
-        if (this.long_name === "Fukui Prefecture") {
+        if (this.long_name === "福井県" || this.long_name === "Fukui Prefecture") {
           result = true;
           return false;
         }
