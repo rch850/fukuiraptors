@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#wapper{
+	background:url(../img/bg.png) center top no-repeat;
+	}
+header{
+	text-align:center;
+}
+.content_area{
+	text-align:center;
+}
+ul.home_menu{
+	margin:0 auto;
+	padding:0;
+	width:300px;
+}
+ul.home_menu li{
+	list-style:none;
+	float:left;
+	margin:0 0px 0 0 ;
+}
+ul.home_menu li.disable img{
+	filter: alpha(opacity=50);
+	opacity:0.5;
+	-moz-opacity:0.5;
+}
+
+/* footer */ 
+footer{
+	background:url(../img/bg_footer.png) top left repeat-x;
+	height:122px;
+}
+footer .score{
+	float:right;
+	width:141px;
+	height:122px;
+	background:url(../img/bg_footer_score.png) top left no-repeat;
+	text-align:center;
+	color:white;
+	text-shadow: 0 1px 0 black;
+	line-height:1.1
+}
+footer .score p{
+	margin:30px 0 0 20px;
+}
+footer .score p span{
+	font-size:45px;
+	margin:0 5px 0 0;
+}
+footer  ul{
+	margin:50px 0 0 10px;
+	padding:0;
+}
+footer ul li{
+	list-style:none;
+	float:left;
+	margin:0 15px 0 0 ;
+}
