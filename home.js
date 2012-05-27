@@ -1,5 +1,8 @@
 // ホーム画面用 JavaScript
 //
+// 必要ライブラリ
+// - dino100.js
+//
 // 参考ドキュメント
 // - Geolocation: https://developer.mozilla.org/ja/Using_geolocation
 // - 逆ジオコーディング: https://developers.google.com/maps/documentation/javascript/services?hl=ja#ReverseGeocoding
@@ -31,20 +34,8 @@ $(function() {
     return false;
   }
 
-  function getQuizLevel1() {
-    return "q001.html";
-  }
-
-  function getQuizLevel2() {
-    return "q002.html";
-  }
-
-  function getQuizLevel3() {
-    return "q003.html";
-  }
-
   // レベル1の問題を設定する
-  $("li.level:nth-child(1) > a").attr("href", getQuizLevel1());
+  $("li.level:nth-child(1) > a").attr("href", dino100.getQuizLevel1());
 
   // レベル2, レベル3の有効/無効と、問題を設定する
   var geocoder = new google.maps.Geocoder();
@@ -59,11 +50,11 @@ $(function() {
       }
       if (isGeocodeResultFukuiPrefecture(results)) {
         $("li.level:nth-child(2)").removeClass("disable");
-        $("li.level:nth-child(2) > a").attr("href", getQuizLevel2());
+        $("li.level:nth-child(2) > a").attr("href", dino100.getQuizLevel2());
       }
       if (isGeocodeResultMuseum(results)) {
         $("li.level:nth-child(3)").removeClass("disable");
-        $("li.level:nth-child(3) > a").attr("href", getQuizLevel3());
+        $("li.level:nth-child(3) > a").attr("href", dino100.getQuizLevel3());
       }
     });
   });
