@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
     <script src="dino100.js"></script>
@@ -14,24 +15,31 @@
     <meta name="description" content="FukuiRaptors : 恐竜博物館を○○倍楽しむ！！" />
   </head>
 
-  <body>
+<body>
 
-    <div data-role="page">
-
-      <div data-role="header">
-        <h1>もんだい！！</h1>
-      </div><!-- /header -->
-
-      <div data-role="content"> 
-        <p><ruby><rb>恐竜<rt>きょうりゅう</ruby>が<ruby><rb>絶滅<rt>ぜつめつ</ruby>した<ruby><rb>原因<rt>げんいん</ruby>はどれでしょう？</p>
+<div id="wapper" data-role="page">
+  <header data-role="header">
+    <h1>クイズ</h1>
+  </header>
+  <div data-role="content" class="content_area_quiz">
+    <p>Q. <ruby><rb>恐竜<rt>きょうりゅう</ruby>が<ruby><rb>絶滅<rt>ぜつめつ</ruby>した<ruby><rb>原因<rt>げんいん</ruby>はどれでしょう？</p>
         <p>
           <a href="ans-right.html" data-role="button" data-rel="dialog" data-transition="pop">①<ruby><rb>隕石<rt>いんせき</ruby>の<ruby><rb>落下<rt>らっか</ruby></a><!-- ○ -->
           <a href="ans-wrong.html" data-role="button" data-rel="dialog" data-transition="pop">②②<ruby><rb>宇宙人<rt>うちゅうじん</ruby>にさらわれた</a>
           <a href="ans-wrong.html" data-role="button" data-rel="dialog" data-transition="pop">②③<ruby><rb>大<rt>おお</ruby>きな<ruby><rb>火山<rt>かざん</ruby>が<ruby><rb>噴火<rt>ふんか</ruby>した</a>
         </p>
-      </div><!-- /content -->
-
-    </div><!-- /page -->
-
-  </body>
+  </div>
+  <footer data-role="footer" data-position="fixed" data-theme="f">
+<div class="score">
+      <p>あなたは<br>
+        <strong><span>100</span>倍</strong><br>
+        たのしめます！
+      </p>
+</div>
+    <ul>
+      <li><a href="http://rch850.github.com/fukuiraptors/"><img src="img/footer_menu_home.png" width="64" height="73" alt="ホーム"></a></li>
+      <li><a href="http://rch850.github.com/fukuiraptors/result.html"><img src="img/footer_menu_score.png" width="64" height="73" alt="成績表"></a></li>
+  </footer>
+</div>
+</body>
 </html>
