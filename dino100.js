@@ -52,9 +52,12 @@ var dino100 = dino100 || {};
     localStorage.dino100 = JSON.stringify(obj);
   }
 
-  dino100.getSolvedRate = function() {
+  function getSolvedRate() {
     var obj = JSON.parse(localStorage.dino100);
     return 1 + Math.floor(99 * obj.solved.length / (LV1.length + LV2.length + LV3.length));
   }
+  $(function() {
+    $(".score span").text(getSolvedRate());
+  });
 })();
 
