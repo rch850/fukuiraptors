@@ -24,18 +24,46 @@ $(function() {
     return result;
   }
 
+  /**
+   * @return 逆ジオコーディングの結果が恐竜博物館かどうか
+   */
+  function isGeocodeResultMuseum(results) {
+    return false;
+  }
+
+  function getQuizLevel1() {
+    return "q001.html";
+  }
+
+  function getQuizLevel2() {
+    return "q002.html";
+  }
+
+  function getQuizLevel3() {
+    return "q003.html";
+  }
+
+  // レベル1の問題を設定する
+  $("li.level:nth-child(1) > a").attr("href", getQuizLevel1());
+
+  // レベル2, レベル3の有効/無効と、問題を設定する
   var geocoder = new google.maps.Geocoder();
   navigator.geolocation.getCurrentPosition(function(position) {
     var latlng = new google.maps.LatLng(
       position.coords.latitude,
       position.coords.longitude);
-    geocoder.geocode({'latLng': latlng}, function(results, status) {
+    geocoder.geocode({"latLng": latlng}, function(results, status) {
       if (status !== google.maps.GeocoderStatus.OK) {
         console.info("status is " + status);
         return;
       }
       if (isGeocodeResultFukuiPrefecture(results)) {
-        $('li.level:nth-child(2)').removeClass('disable');
+        $("li.level:nth-child(2)").removeClass("disable");
+        $("li.level:nth-child(2) > a").attr("href", getQuizLevel2());
+      }
+      if (isGeocodeResultMuseum(results)) {
+        $("li.level:nth-child(3)").removeClass("disable");
+        $("li.level:nth-child(3) > a").attr("href", getQuizLevel3());
       }
     });
   });
