@@ -40,5 +40,21 @@ var dino100 = dino100 || {};
   dino100.getQuizLevel3 = function() {
     return getRandomElement(LV3);
   }
+
+  dino100.setSolved = function(quiz) {
+    var obj = JSON.parse(localStorage.dino100);
+    for (var i = 0; i < obj.solved.length; i++) {
+      if (obj.solved[i] === quiz) {
+        return;
+      }
+    }
+    obj.solved.push(quiz);
+    localStorage.dino100 = JSON.stringify(obj);
+  }
+
+  dino100.getSolvedRate = function() {
+    var obj = JSON.parse(localStorage.dino100);
+    return 1 + Math.floor(99 * obj.solved.length / (LV1.length + LV2.length + LV3.length));
+  }
 })();
 

@@ -58,4 +58,6 @@ $(function() {
       }
     });
   });
+
+  $(".score span").text(dino100.getSolvedRate());
 });
