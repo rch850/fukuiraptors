@@ -35,7 +35,7 @@ $(function() {
   }
 
   // レベル1の問題を設定する
-  $("li.level:nth-child(1) > a").attr("href", dino100.getQuizLevel1());
+  $("ul.home_menu > li:nth-child(1) > a").attr("href", dino100.getQuizLevel1());
 
   // レベル2, レベル3の有効/無効と、問題を設定する
   var geocoder = new google.maps.Geocoder();
@@ -49,12 +49,12 @@ $(function() {
         return;
       }
       if (isGeocodeResultFukuiPrefecture(results)) {
-        $("li.level:nth-child(2)").removeClass("disable");
-        $("li.level:nth-child(2) > a").attr("href", dino100.getQuizLevel2());
+        $("ul.home_menu > li:nth-child(2)").removeClass("disable");
+        $("ul.home_menu > li:nth-child(2) > a").attr("href", dino100.getQuizLevel2());
       }
       if (isGeocodeResultMuseum(results)) {
-        $("li.level:nth-child(3)").removeClass("disable");
-        $("li.level:nth-child(3) > a").attr("href", dino100.getQuizLevel3());
+        $("ul.home_menu > li:nth-child(3)").removeClass("disable");
+        $("ul.home_menu > li:nth-child(3) > a").attr("href", dino100.getQuizLevel3());
       }
     });
   });
